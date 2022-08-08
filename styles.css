@@ -7,20 +7,35 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 .header {
     height: 100px;
     background-color: rgb(231, 33, 33);
     position: relative;
 }
 
-.profile {
+.skills,
+.mywork,
+.contact-me,
+form {
     position: relative;
     display: block; /* Keeps content as big as the photo */
     text-align: center;
+    top: -80px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    top: -80px;
+}
+
+.greeting-photo {
+    position: relative;
+    display: block; /* Keeps content as big as the photo */
+    text-align: center;
+    top: -71px;
 }
 
 .profile-picture {
@@ -59,7 +74,7 @@ body {
 }
 
 .skill-images {
-    background-color: rgba(67, 169, 233, 0.103);
+    background-color: rgba(255, 18, 1, 0.192);
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 10px;
@@ -78,16 +93,23 @@ body {
     border-radius: 5px;
 }
 
-.mywork h3, h5 {
-    margin-bottom: 15px;
+.mywork h1 {
+    margin-bottom: 50px;
 }
 
 .projects {
-    background-color: rgba(67, 169, 233, 0.103);
+    background-color: rgba(67, 169, 233, 0.219);
     border-radius: 10px;
     padding: 5px 0 5px 0;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.projects h2 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .written-in {
@@ -99,7 +121,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     height: 250px;
-    width: 80%;
+    width: 90%;
 }
 
 .tip-calculator {
@@ -107,8 +129,202 @@ body {
     border-radius: 10px;
     cursor: pointer;
     height: 250px;
-    width: 80%;
+    width: 90%;
+}
+
+.contact-me {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Contact Images */
+.contact {
+    height: 40px;
+    margin: 10px;
+}
+
+.form {
+    margin: 20px auto 0 auto;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.form label {
+    text-align: left;
+    font-weight: bold;
 }
 
 
+textarea, input {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 90%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+.inputs {
+    display: inline-block;
+    width: 300px;
+    margin: 0;
+}
+
+::placeholder {
+    font-weight: bold;
+}
+
+button {
+    display: inline-block;
+    text-align: center;
+    width: 202px;
+    height: 40px;
+    background-color: rgb(78, 184, 250);
+    border-radius: 5px;
+    border: 1px solid rgb(3, 146, 202);
+    font-weight: bold;
+}
+
+/* Ipad Sizing */
+@media only screen and (min-width: 820px) {
+    .myself {
+        font-size: 40px;
+    }
+    
+    .intro {
+        height: 130px;
+    }
+
+    .intro p {
+        font-size: 21px;
+    }
+
+    .skills h1 {
+        font-size: 40px;
+    }
+
+    .mywork h1 {
+        font-size: 40px;
+    }
+
+    .phoenix-air, .tip-calculator{
+        height: 369px;
+    }
+
+    .contact-me h1 {
+        font-size: 40px;
+    }
+
+    .contact {
+        height: 70px;
+    }
+
+    .inputs {
+        width: 500px;
+    }
+
+    input {
+        width: 500px;
+        height: 50px;
+    }
+
+    textarea {
+        width: 500px;
+        height: 100px;
+    }
+
+    button {
+        width: 500px;
+        height: 50px;
+        font-size: 22px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    ::placeholder {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .skills,
+    .mywork,
+    .contact-me,
+    .form {
+        top: 33px;
+        width: 50%;
+        margin: auto;
+    }
+
+    .desktop-flex {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+        top: 10px;
+    }
+
+    .profile-picture {
+        height: 70px;
+        width: 70px;
+    }
+
+    .myself {
+        color: white;
+        text-decoration: underline;
+        font-weight: normal;
+        font-size: 25px;
+    }
+
+    .intro {
+        height: 70px;
+        width: 70%;
+        margin: 0;
+    }
+
+    .intro p {
+        font-size: 15px;
+        text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .skill-images {
+        margin-bottom: 100px;
+    }
+
+    .websites {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .mywork {
+        width: 95%;
+    }
+
+
+    .projects {
+        margin-bottom: 90px;
+    }
+
+    .phoenix-air,
+    .tip-calculator {
+        height: 300px;
+        width: 92%;
+    }
+
+    .contact-me {
+        margin-top: 50px;
+    }
+
+    .form {
+        margin-bottom: 100px;
+    }
+
+}
 
