@@ -1,0 +1,62 @@
+.mywork {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 8fr;
+    height: 800px;
+    background-color: #121212;
+}
+
+.mywork h1{
+    text-align: center;
+    color: white;
+}
+
+.websites {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 20px;
+    width: 80%;
+}
+
+
+.projects {
+    text-align: center;
+    background-color: white;
+    padding: 5px 0 5px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.288);
+}
+
+.projects h2 {
+    letter-spacing: 2px;
+    padding: 10px;
+    font-family: Bondrians;
+}
+
+.written-in {
+    margin-bottom: 20px;
+}
+
+.phoenix-air {
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    cursor: pointer;
+    height: 250px;
+    width: 90%;
+}
+
+.tip-calculator {
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    cursor: pointer;
+    height: 250px;
+    width: 90%;
+}
+
+.pxlart {
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    cursor: pointer;
+    height: 250px;
+    width: 90%;
+}
