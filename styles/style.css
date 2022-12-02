@@ -15,6 +15,10 @@ body {
   margin: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: Bondrians;
   src: url(/gomarice_no_continue.ttf);
@@ -25,13 +29,37 @@ body {
   background-color: white;
 }
 
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 20px;
+  height: 50px;
+  margin-right: 40px;
+}
+
+.nav-bar a {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
 .greeting {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr 2fr;
       grid-template-columns: 1fr 2fr 2fr;
   height: 50%;
-  width: 80%;
+  width: 1100px;
   -webkit-column-gap: 10px;
           column-gap: 10px;
   margin-left: auto;
@@ -131,8 +159,8 @@ body {
 .websites {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (450px)[3];
+      grid-template-columns: repeat(3, 450px);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -140,7 +168,6 @@ body {
   margin-right: auto;
   -webkit-column-gap: 20px;
           column-gap: 20px;
-  width: 80%;
 }
 
 .projects {
@@ -155,10 +182,15 @@ body {
 .projects h2 {
   letter-spacing: 2px;
   padding: 10px;
-  font-family: Bondrians;
 }
 
 .written-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -259,5 +291,29 @@ textarea, input {
   border: 1px solid #0392ca;
   font-weight: bold;
   cursor: pointer;
+}
+
+.footer {
+  height: 70px;
+  background-color: #e0e0e0;
+}
+
+.footer-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.footer-img {
+  height: 40px;
+  width: 40px;
 }
 /*# sourceMappingURL=style.css.map */
