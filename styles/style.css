@@ -56,32 +56,26 @@ html {
 .greeting {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr 2fr;
-      grid-template-columns: 1fr 2fr 2fr;
-  height: 50%;
-  width: 1100px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-grid-columns: 150px 300px 450px;
+      grid-template-columns: 150px 300px 450px;
+  -ms-grid-rows: 127px 118px 175px;
+      grid-template-rows: 127px 118px 175px;
+  margin: auto;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 
-.myself {
-  font-family: Bondrians;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.3;
-}
-
 .profile-picture {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 150px;
   width: 150px;
   -o-object-fit: cover;
@@ -89,6 +83,22 @@ html {
   border-radius: 360px;
   -webkit-box-shadow: 0 1px 8px 8px white inset;
           box-shadow: 0 1px 8px 8px white inset;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+}
+
+.myself {
+  font-family: Bondrians;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+}
+
+.intro {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
 }
 
 .border {
@@ -139,14 +149,41 @@ html {
   width: 60px;
 }
 
+@media screen and (max-width: 980px) {
+  .greeting {
+    -ms-grid-columns: 10px 300px 10px;
+        grid-template-columns: 10px 300px 10px;
+    -ms-grid-rows: 170px 170px 200px;
+        grid-template-rows: 170px 170px 200px;
+  }
+  .profile-picture {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  .myself {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    text-align: center;
+  }
+  .intro {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+  }
+  .skills-container {
+    height: 270px;
+  }
+}
+
 .mywork {
-  display: -ms-grid;
-  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-rows: 1fr 8fr;
-      grid-template-rows: 1fr 8fr;
   height: 800px;
   background-color: #121212;
 }
@@ -154,13 +191,20 @@ html {
 .mywork h1 {
   text-align: center;
   color: white;
+  padding: 30px;
 }
 
 .websites {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (450px)[3];
-      grid-template-columns: repeat(3, 450px);
+  -ms-grid-columns: 400px 400px 400px;
+      grid-template-columns: 400px 400px 400px;
+  -ms-grid-rows: 20px 430px 20px;
+      grid-template-rows: 20px 430px 20px;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -174,9 +218,29 @@ html {
   text-align: center;
   background-color: white;
   padding: 5px 0 5px 0;
-  margin-bottom: 20px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.288);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.288);
+}
+
+.project-1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+}
+
+.project-2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+}
+
+.project-3 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
 }
 
 .projects h2 {
@@ -213,6 +277,62 @@ html {
   cursor: pointer;
   height: 250px;
   width: 90%;
+}
+
+@media screen and (max-width: 1300px) {
+  .websites {
+    -ms-grid-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+        grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+    width: 98%;
+  }
+  .projects h5 {
+    width: 100%;
+    margin: auto;
+  }
+  .phoenix-air {
+    height: 150px;
+  }
+  .tip-calculator {
+    height: 150px;
+  }
+  .pxlart {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .mywork {
+    overflow: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .websites {
+    -ms-grid-columns: 10px 330px 10px;
+        grid-template-columns: 10px 330px 10px;
+    -ms-grid-rows: 330px 330px 330px;
+        grid-template-rows: 330px 330px 330px;
+  }
+  .project-1 {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  .project-2 {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    text-align: center;
+  }
+  .project-3 {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+  }
 }
 
 .contact-me {
@@ -291,6 +411,12 @@ textarea, input {
   border: 1px solid #0392ca;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media screen and (max-width: 840px) {
+  .contact-me {
+    width: auto;
+  }
 }
 
 .footer {

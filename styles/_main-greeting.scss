@@ -26,18 +26,25 @@
     text-decoration: none;
 }
 
-
-
 .greeting {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    height: 50%;
-    width: 1100px;
-    column-gap: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: start;
+    grid-template-columns: 150px 300px 450px;
+    grid-template-rows: 127px 118px 175px;
+    margin: auto;
+    column-gap: 20px;
+    justify-content: center;
     align-items: flex-end;
+}
+
+.profile-picture {
+    margin: auto;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 360px;
+    box-shadow: 0 1px 8px 8px white inset;
+    grid-row-start: 3;
 }
 
 .myself {
@@ -45,16 +52,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 1.3;
+    grid-row-start: 3;
 }
 
-.profile-picture {
-    margin-left: auto;
-    margin-right: auto;
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 360px;
-    box-shadow: 0 1px 8px 8px white inset;
+.intro {
+    grid-row-start: 3;
 }
 
 .border {
@@ -98,4 +100,32 @@
     margin-left: 10px;
     height: 40px;
     width: 60px;
+}
+
+@media screen and (max-width: 980px) {
+    .greeting {
+        grid-template-columns: 10px 300px 10px;
+        grid-template-rows: 170px 170px 200px;
+    }
+    
+    .profile-picture {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    
+    .myself {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        text-align: center;
+    }
+    
+    .intro {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+
+    .skills-container {
+        height: 270px;
+    }
+    
 }

@@ -54,3 +54,9 @@ textarea, input {
     font-weight: bold;
     cursor: pointer;
 }
+
+@media screen and (max-width: 840px) {
+    .contact-me {
+        width: auto;
+    }
+}

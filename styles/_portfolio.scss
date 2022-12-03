@@ -1,7 +1,5 @@
 .mywork {
-    display: grid;
     align-items: center;
-    grid-template-rows: 1fr 8fr;
     height: 800px;
     background-color: #121212;
 }
@@ -9,11 +7,17 @@
 .mywork h1{
     text-align: center;
     color: white;
+    padding: 30px;
 }
 
 .websites {
     display: grid;
-    grid-template-columns: repeat(3, 450px);
+    // grid-template-columns: repeat(3, 450px);
+    // grid-template-columns: repeat(auto-fill, minmax(250px, 450px));
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 20px 430px 20px;
+    width: 90%;
+    justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -25,8 +29,22 @@
     text-align: center;
     background-color: white;
     padding: 5px 0 5px 0;
-    margin-bottom: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.288);
+}
+
+.project-1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.project-2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.project-3 {
+    grid-column-start: 3;
+    grid-row-start: 2;
 }
 
 .projects h2 {
@@ -60,3 +78,62 @@
     height: 250px;
     width: 90%;
 }
+
+@media screen and (max-width: 1300px) {
+    .websites {
+        grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+        width: 98%;
+    }
+
+    .projects h5 {
+        width: 100%;
+        margin:auto;
+    }
+
+    .phoenix-air {
+        height: 150px;
+    }
+    
+    .tip-calculator {
+        height: 150px;
+    }
+    
+    .pxlart {
+        height: 150px;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    .mywork {
+        overflow: auto;
+        height: auto;
+    }
+
+    
+}
+
+@media screen and (max-width: 840px) {
+    .websites {
+        grid-template-columns: 10px 330px 10px;
+        grid-template-rows: 330px 330px 330px;
+    }
+
+    .project-1 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    
+    .project-2 {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        text-align: center;
+    }
+    
+    .project-3 {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+
+}
+
