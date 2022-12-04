@@ -116,17 +116,22 @@
 			<div class="contact-me" id="contact-me">
 				<h1>Contact Me</h1>
 
-				<form action="mailto:jaclem12@gmail.com"
+				<form action="https://api.web3forms.com/submit"
 				method="POST"
 				enctype="multipart/form-data"
 				name="EmailForm"
-				class="form">
+				class="form"
+				id="form">
 					<div class="inputs">
-						<input type="text" name="Contact-Name" placeholder="Name:">
-						<input type="email" name="Contact-Email" placeholder="Email:">
-						<textarea name="Contact-Message" rows="6" placeholder="Message..."></textarea>
+						<input type="hidden" name="access_key" value="d90cf346-5728-4048-a12d-88a71d582f47">
+
+						<input type="text" name="Contact-Name" placeholder="Name:" id="name" required>
+						<input type="email" name="Contact-Email" placeholder="Email:" id="email" required>
+						<textarea name="Contact-Message" rows="6" placeholder="Message..." id="message" required></textarea>
 					
-						<button type="submit" value="Submit">Send</button>
+						<button type="submit" value="Submit" id="submit">Send</button>
+
+						<div id="result"></div>
 					</div>
 				</form>  
 			</div>
@@ -143,5 +148,6 @@
 		</div>
 	</div>
 
+	<script src="/js/script.js"></script>
 </body>
 </html>
